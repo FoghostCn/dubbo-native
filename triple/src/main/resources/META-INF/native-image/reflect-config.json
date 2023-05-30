@@ -1,0 +1,203 @@
+[
+  {
+    "name": "org.apache.dubbo.demo.GreeterService",
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.apache.dubbo.demo.GreeterServiceImpl",
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.apache.dubbo.demo.hello.HelloReply",
+    "methods": [
+      {
+        "name": "getDefaultInstance",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "org.apache.dubbo.demo.hello.HelloReply",
+    "methods": [
+      {
+        "name": "getDefaultInstance",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "org.apache.dubbo.demo.hello.HelloRequest",
+    "methods": [
+      {
+        "name": "getDefaultInstance",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "com.google.rpc.DebugInfo",
+    "methods": [
+      {
+        "name": "getStackEntriesList",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "com.google.rpc.DebugInfo$Builder",
+    "methods": [
+      {
+        "name": "getStackEntriesList",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "org.apache.dubbo.remoting.transport.netty4.NettyPortUnificationServerHandler",
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.apache.dubbo.rpc.protocol.tri.transport.TripleServerConnectionHandler",
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.apache.dubbo.rpc.protocol.tri.transport.TripleTailHandler",
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.apache.dubbo.rpc.protocol.tri.transport.TripleCommandOutBoundHandler",
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.apache.dubbo.rpc.protocol.tri.transport.TripleHttp2FrameServerHandler",
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.apache.dubbo.remoting.transport.netty4.NettyChannelHandler",
+    "allPublicMethods": true
+  },
+  {
+    "name": "java.nio.channels.spi.SelectorProvider",
+    "allPublicMethods": true,
+    "methods": [
+      {
+        "name": "openServerSocketChannel",
+        "parameterTypes": [
+          "java.net.ProtocolFamily"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "java.lang.Runtime$Version",
+    "allPublicMethods": true,
+    "methods": [
+      {
+        "name": "major",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "java.lang.Runtime",
+    "allPublicMethods": true,
+    "methods": [
+      {
+        "name": "version",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "com.alibaba.nacos.common.notify.DefaultPublisher",
+    "allPublicMethods": true,
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "org.apache.dubbo.registry.client.metadata.MetadataServiceDelegation",
+    "allPublicMethods": true,
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": [
+          "org.apache.dubbo.rpc.model.ApplicationModel"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.apache.dubbo.metadata.aot.MetadataReflectionTypeDescriberRegistrar",
+    "allPublicMethods": true,
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "org.apache.dubbo.metadata.aot.MetadataProxyDescriberRegistrar",
+    "allPublicMethods": true,
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "org.apache.dubbo.metrics.aot.DefaultMetricsReflectionTypeDescriberRegistrar",
+    "allPublicMethods": true,
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "org.apache.dubbo.metrics.collector.AggregateMetricsCollector",
+    "allPublicMethods": true,
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": [
+          "org.apache.dubbo.rpc.model.ApplicationModel"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.apache.dubbo.metrics.collector.HistogramMetricsCollector",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.apache.dubbo.metadata.MetadataService",
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.apache.dubbo.metadata.MetadataInfo",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.apache.dubbo.remoting.transport.netty4.NettyServerHandler",
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.apache.dubbo.remoting.transport.netty4.ssl.SslServerTlsHandler",
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.apache.dubbo.remoting.transport.netty4.NettyClientHandler",
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.apache.dubbo.remoting.transport.netty4.ssl.SslClientTlsHandler",
+    "allDeclaredMethods": true
+  }
+]

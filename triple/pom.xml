@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.example</groupId>
+        <artifactId>dubbo-native</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>triple</artifactId>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <protobuf-java_version>3.22.3</protobuf-java_version>
+
+    </properties>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>kr.motd.maven</groupId>
+                <artifactId>os-maven-plugin</artifactId>
+                <version>${maven_os_plugin_version}</version>
+                <executions>
+                    <execution>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>detect</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.xolstice.maven.plugins</groupId>
+                <artifactId>protobuf-maven-plugin</artifactId>
+                <version>${maven_protobuf_plugin_version}</version>
+                <configuration>
+                    <protocArtifact>com.google.protobuf:protoc:${protobuf-java_version}:exe:${os.detected.classifier}
+                    </protocArtifact>
+                    <pluginId>triple-java</pluginId>
+                    <outputDirectory>${project.build.directory}/generated-sources/source/proto/main/java
+                    </outputDirectory>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>compile</goal>
+                            <!--                                    <goal>test-compile</goal>-->
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>3.4.0</version>
+                <executions>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>add-source</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>${project.build.directory}/generated-sources/source/proto/main/java</source>
+                            </sources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>native</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <version>3.11.0</version>
+                        <configuration>
+                            <release>17</release>
+                            <fork>true</fork>
+                            <verbose>true</verbose>
+                        </configuration>
+                    </plugin>
+                    <!--                    <plugin>-->
+                    <!--                        <groupId>org.springframework.boot</groupId>-->
+                    <!--                        <artifactId>spring-boot-maven-plugin</artifactId>-->
+                    <!--                        <version>3.1.0</version>-->
+                    <!--                        <executions>-->
+                    <!--                            <execution>-->
+                    <!--                                <id>process-aot</id>-->
+                    <!--                                <goals>-->
+                    <!--                                    <goal>process-aot</goal>-->
+                    <!--                                </goals>-->
+                    <!--                            </execution>-->
+                    <!--                        </executions>-->
+                    <!--                    </plugin>-->
+                    <plugin>
+                        <groupId>org.graalvm.buildtools</groupId>
+                        <artifactId>native-maven-plugin</artifactId>
+                        <version>0.9.20</version>
+                        <configuration>
+                            <classesDirectory>${project.build.outputDirectory}</classesDirectory>
+                            <metadataRepository>
+                                <enabled>true</enabled>
+                            </metadataRepository>
+                            <requiredVersion>22.3</requiredVersion>
+                            <imageName>${project.artifactId}</imageName>
+                            <mainClass>org.apache.dubbo.demo.provider.ApiProvider</mainClass>
+                            <buildArgs>
+                                --no-fallback
+                                --initialize-at-build-time=org.slf4j.MDC
+                                --initialize-at-build-time=org.slf4j.LoggerFactory
+                                --initialize-at-build-time=org.slf4j.impl.StaticLoggerBinder
+                                --initialize-at-build-time=ch.qos.logback
+                                --initialize-at-build-time=ch.qos.logback.classic.Level
+                                --initialize-at-build-time=ch.qos.logback.classic.Logger
+                                --initialize-at-build-time=ch.qos.logback.core.util.StatusPrinter
+                                --initialize-at-build-time=ch.qos.logback.core.status.StatusBase
+                                --initialize-at-build-time=ch.qos.logback.core.status.InfoStatus
+                                --initialize-at-build-time=ch.qos.logback.core.spi.AppenderAttachableImpl
+                                --initialize-at-build-time=ch.qos.logback.core.util.Loader
+                                --initialize-at-build-time=ch.qos.logback.classic.spi.ThrowableProxy
+                                --initialize-at-build-time=ch.qos.logback.core.CoreConstants
+                                --trace-class-initialization=ch.qos.logback.classic.Logger
+                                --initialize-at-run-time=io.netty.channel.epoll.Epoll
+                                --initialize-at-run-time=io.netty.channel.epoll.Native
+                                --initialize-at-run-time=io.netty.channel.epoll.EpollEventLoop
+                                --initialize-at-run-time=io.netty.channel.epoll.EpollEventArray
+                                --initialize-at-run-time=io.netty.channel.DefaultFileRegion
+                                --initialize-at-run-time=io.netty.channel.kqueue.KQueueEventArray
+                                --initialize-at-run-time=io.netty.channel.kqueue.KQueueEventLoop
+                                --initialize-at-run-time=io.netty.channel.kqueue.Native
+                                --initialize-at-run-time=io.netty.channel.unix.Errors
+                                --initialize-at-run-time=io.netty.channel.unix.IovArray
+                                --initialize-at-run-time=io.netty.channel.unix.Limits
+                                --initialize-at-run-time=io.netty.util.internal.logging.Log4JLogger
+                                --initialize-at-run-time=io.netty.channel.unix.Socket
+                                --initialize-at-run-time=io.netty.channel.ChannelHandlerMask
+                                --enable-url-protocols=http
+                                --report-unsupported-elements-at-runtime
+                                -H:+ReportExceptionStackTraces
+                            </buildArgs>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>add-reachability-metadata</id>
+                                <goals>
+                                    <goal>add-reachability-metadata</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>build-native</id>
+                                <goals>
+                                    <goal>compile-no-fork</goal>
+                                </goals>
+                                <phase>package</phase>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.dubbo</groupId>
+                        <artifactId>dubbo-maven-plugin</artifactId>
+                        <version>${dubbo.version}</version>
+                        <configuration>
+                            <mainClass>org.apache.dubbo.demo.provider.ApiProvider</mainClass>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <phase>process-sources</phase>
+                                <goals>
+                                    <goal>dubbo-process-aot</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+
+        </profile>
+    </profiles>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-rpc-triple</artifactId>
+            <version>${dubbo.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>${protobuf-java_version}</version>
+        </dependency>
+    </dependencies>
+</project>
