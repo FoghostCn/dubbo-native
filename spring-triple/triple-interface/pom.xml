@@ -18,26 +18,20 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <parent>
         <groupId>org.example</groupId>
-        <artifactId>dubbo-native</artifactId>
+        <artifactId>spring-triple</artifactId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>spring-triple</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>triple-provider</module>
-        <module>triple-interface</module>
-        <module>triple-consumer</module>
-    </modules>
+    <artifactId>triple-interface</artifactId>
 
     <properties>
         <java.version>17</java.version>
-        <dubbo.version>3.3.0-beta.1-SNAPSHOT</dubbo.version>
-        <spring-boot.version>3.0.5</spring-boot.version>
-        <spring-boot-maven-plugin.version>3.0.5</spring-boot-maven-plugin.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
     </properties>
+
 
 </project>

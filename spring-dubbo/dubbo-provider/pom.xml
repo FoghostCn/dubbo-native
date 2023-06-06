@@ -20,12 +20,12 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.example</groupId>
-        <artifactId>spring-triple</artifactId>
+        <artifactId>spring-dubbo</artifactId>
         <version>1.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>consumer</artifactId>
+    <artifactId>dubbo-provider</artifactId>
 
     <properties>
         <java.version>17</java.version>
@@ -38,7 +38,7 @@
 
         <dependency>
             <groupId>org.example</groupId>
-            <artifactId>interface</artifactId>
+            <artifactId>dubbo-interface</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
 
@@ -202,9 +202,9 @@
             </exclusions>
         </dependency>
         <dependency>
-            <groupId>org.apache.dubbo</groupId>
-            <artifactId>dubbo-rpc-triple</artifactId>
-            <version>${dubbo.version}</version>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.14</version>
         </dependency>
     </dependencies>
 
@@ -261,7 +261,7 @@
                         <artifactId>dubbo-maven-plugin</artifactId>
                         <version>${dubbo.version}</version>
                         <configuration>
-                            <mainClass>org.apache.dubbo.nativeimage.consumer.NativeDemoConsumerApplication</mainClass>
+                            <mainClass>org.apache.dubbo.nativeimage.provider.NativeDemoProviderApplication</mainClass>
                         </configuration>
                         <executions>
                             <execution>

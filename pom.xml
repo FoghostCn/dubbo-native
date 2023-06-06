@@ -12,6 +12,7 @@
         <module>triple</module>
         <module>dubbo</module>
         <module>spring-triple</module>
+        <module>spring-dubbo</module>
     </modules>
 
     <properties>
