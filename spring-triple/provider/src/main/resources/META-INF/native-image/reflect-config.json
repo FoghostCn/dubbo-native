@@ -1,7 +1,30 @@
 [
   {
+    "name": "org.apache.dubbo.rpc.protocol.tri.transport.TripleHttp2FrameServerHandler",
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.apache.dubbo.rpc.protocol.tri.transport.TripleCommandOutBoundHandler",
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.apache.dubbo.rpc.protocol.tri.transport.TripleTailHandler",
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.apache.dubbo.rpc.protocol.tri.transport.TripleServerConnectionHandler",
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.apache.dubbo.remoting.transport.netty4.NettyPortUnificationServerHandler",
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.apache.dubbo.remoting.transport.netty4.NettyChannelHandler",
+    "allPublicMethods": true
+  },
+  {
     "name": "java.lang.Runtime$Version",
-    "allPublicMethods": true,
     "methods": [
       {
         "name": "major",
@@ -11,7 +34,6 @@
   },
   {
     "name": "java.lang.Runtime",
-    "allPublicMethods": true,
     "methods": [
       {
         "name": "version",

@@ -23,7 +23,7 @@ dubbo:
     compiler: jdk
     qos-port: 22223
   protocol:
-    name: dubbo
+    name: tri
     port: -1
     serialization: fastjson2
   registry:

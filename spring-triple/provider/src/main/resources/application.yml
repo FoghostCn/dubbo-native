@@ -21,7 +21,7 @@ dubbo:
     logger: slf4j
     compiler: jdk
   protocol:
-    name: dubbo
+    name: tri
     port: -1
     serialization: fastjson2
   registry:
