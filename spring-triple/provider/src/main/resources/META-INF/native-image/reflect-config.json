@@ -1,0 +1,22 @@
+[
+  {
+    "name": "java.lang.Runtime$Version",
+    "allPublicMethods": true,
+    "methods": [
+      {
+        "name": "major",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "java.lang.Runtime",
+    "allPublicMethods": true,
+    "methods": [
+      {
+        "name": "version",
+        "parameterTypes": []
+      }
+    ]
+  }
+]
