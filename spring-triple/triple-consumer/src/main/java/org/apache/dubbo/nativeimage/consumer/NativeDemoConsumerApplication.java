@@ -28,7 +28,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 @EnableDubbo(scanBasePackages = {"org.apache.dubbo.nativeimage.consumer"})
 public class NativeDemoConsumerApplication {
 
-    @DubboReference(retries = 0)
+    @DubboReference(retries = 0, proxy = "jdk")
     private DemoService demoService;
 
     public static void main(String[] args) throws InterruptedException {

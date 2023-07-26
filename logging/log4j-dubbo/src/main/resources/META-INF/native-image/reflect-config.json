@@ -1,0 +1,244 @@
+[
+  {
+    "name": "java.lang.Runtime$Version",
+    "allPublicMethods": true,
+    "methods": [
+      {
+        "name": "major",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "java.lang.Runtime",
+    "allPublicMethods": true,
+    "methods": [
+      {
+        "name": "version",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl",
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "java.beans.PropertyVetoException"
+  },
+  {
+    "name": "java.lang.Object",
+    "queryAllPublicMethods": true
+  },
+  {
+    "name": "java.lang.StackTraceElement",
+    "methods": [
+      {
+        "name": "getClassName",
+        "parameterTypes": []
+      },
+      {
+        "name": "getFileName",
+        "parameterTypes": []
+      },
+      {
+        "name": "getLineNumber",
+        "parameterTypes": []
+      },
+      {
+        "name": "getMethodName",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "java.lang.String"
+  },
+  {
+    "name": "java.lang.Thread",
+    "methods": [
+      {
+        "name": "getContextClassLoader",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "java.lang.Throwable",
+    "methods": [
+      {
+        "name": "getStackTrace",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "org.apache.log4j.AppenderSkeleton",
+    "queryAllPublicMethods": true,
+    "methods": [
+      {
+        "name": "setThreshold",
+        "parameterTypes": [
+          "org.apache.log4j.Priority"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.apache.log4j.Category"
+  },
+  {
+    "name": "org.apache.log4j.ConsoleAppender",
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "org.apache.log4j.DailyRollingFileAppender",
+    "queryAllPublicMethods": true,
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": []
+      },
+      {
+        "name": "setDatePattern",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.apache.log4j.FileAppender",
+    "queryAllPublicMethods": true,
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": []
+      },
+      {
+        "name": "setAppend",
+        "parameterTypes": [
+          "boolean"
+        ]
+      },
+      {
+        "name": "setBufferSize",
+        "parameterTypes": [
+          "int"
+        ]
+      },
+      {
+        "name": "setBufferedIO",
+        "parameterTypes": [
+          "boolean"
+        ]
+      },
+      {
+        "name": "setFile",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.apache.log4j.Layout",
+    "queryAllPublicMethods": true
+  },
+  {
+    "name": "org.apache.log4j.Logger"
+  },
+  {
+    "name": "org.apache.log4j.PatternLayout",
+    "queryAllPublicMethods": true,
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": []
+      },
+      {
+        "name": "setConversionPattern",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.apache.log4j.Priority"
+  },
+  {
+    "name": "org.apache.log4j.RollingFileAppender",
+    "queryAllPublicMethods": true,
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": []
+      },
+      {
+        "name": "setMaxBackupIndex",
+        "parameterTypes": [
+          "int"
+        ]
+      },
+      {
+        "name": "setMaxFileSize",
+        "parameterTypes": [
+          "java.lang.String"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.apache.log4j.WriterAppender",
+    "queryAllPublicMethods": true
+  },
+  {
+    "name": "org.apache.log4j.spi.Configurator"
+  },
+  {
+    "name": "org.apache.log4j.spi.Filter",
+    "queryAllPublicMethods": true
+  },
+  {
+    "name": "org.apache.log4j.varia.LevelRangeFilter",
+    "queryAllPublicMethods": true,
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": []
+      },
+      {
+        "name": "setLevelMax",
+        "parameterTypes": [
+          "org.apache.log4j.Level"
+        ]
+      },
+      {
+        "name": "setLevelMin",
+        "parameterTypes": [
+          "org.apache.log4j.Level"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.apache.log4j.xml.DOMConfigurator",
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": []
+      }
+    ]
+  }
+]

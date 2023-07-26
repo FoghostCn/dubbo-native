@@ -13,13 +13,14 @@
         <module>dubbo</module>
         <module>spring-triple</module>
         <module>spring-dubbo</module>
+        <module>logging</module>
     </modules>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <dubbo.version>3.2.1</dubbo.version>
+        <dubbo.version>3.3.0-beta.1-SNAPSHOT</dubbo.version>
         <curator5_version>5.1.0</curator5_version>
         <zookeeper_version>3.8.1</zookeeper_version>
         <maven_os_plugin_version>1.7.1</maven_os_plugin_version>

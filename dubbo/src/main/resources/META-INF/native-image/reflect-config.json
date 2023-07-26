@@ -192,21 +192,5 @@
   {
     "name": "org.apache.dubbo.metadata.MetadataInfo",
     "allDeclaredConstructors": true
-  },
-  {
-    "name": "org.apache.dubbo.remoting.transport.netty4.NettyServerHandler",
-    "allDeclaredMethods": true
-  },
-  {
-    "name": "org.apache.dubbo.remoting.transport.netty4.ssl.SslServerTlsHandler",
-    "allDeclaredMethods": true
-  },
-  {
-    "name": "org.apache.dubbo.remoting.transport.netty4.NettyClientHandler",
-    "allDeclaredMethods": true
-  },
-  {
-    "name": "org.apache.dubbo.remoting.transport.netty4.ssl.SslClientTlsHandler",
-    "allDeclaredMethods": true
   }
 ]

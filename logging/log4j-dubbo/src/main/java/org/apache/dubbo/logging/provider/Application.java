@@ -14,26 +14,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.dubbo.demo.provider;
+package org.apache.dubbo.logging.provider;
 
 import org.apache.dubbo.common.constants.CommonConstants;
-import org.apache.dubbo.config.*;
+import org.apache.dubbo.config.ApplicationConfig;
+import org.apache.dubbo.config.ProtocolConfig;
+import org.apache.dubbo.config.RegistryConfig;
+import org.apache.dubbo.config.ServiceConfig;
 import org.apache.dubbo.config.bootstrap.DubboBootstrap;
-import org.apache.dubbo.demo.DemoService;
+import org.apache.dubbo.logging.DemoService;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class Application {
-
     private static String REGISTRY_URL = "N/A";
 
     public static void main(String[] args) throws Exception {
         if (args != null && args.length > 0) {
             REGISTRY_URL = args[0];
         }
-        System.setProperty("dubbo.application.logger", "logback");
         System.setProperty("native", "true");
+        System.setProperty("dubbo.application.logger", "log4j");
         System.setProperty("org.graalvm.nativeimage.imagecode", "true");
         System.setProperty("dubbo.json-framework.prefer", "fastjson2");
 

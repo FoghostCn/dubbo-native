@@ -1,7 +1,6 @@
 [
   {
     "name": "java.lang.Runtime$Version",
-    "allPublicMethods": true,
     "methods": [
       {
         "name": "major",
@@ -11,7 +10,6 @@
   },
   {
     "name": "java.lang.Runtime",
-    "allPublicMethods": true,
     "methods": [
       {
         "name": "version",

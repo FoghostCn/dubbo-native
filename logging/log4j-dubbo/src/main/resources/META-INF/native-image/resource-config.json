@@ -1,0 +1,15 @@
+{
+  "resources":{
+  "includes":[
+    {
+      "pattern":"\\Qlog4j.xml\\E"
+    },
+    {
+      "pattern":"\\Qlog4j.properties\\E"
+    },
+    {
+      "pattern":"\\Qorg/apache/log4j/xml/log4j.dtd\\E"
+    }
+  ]},
+  "bundles":[]
+}
