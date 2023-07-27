@@ -1,6 +1,6 @@
 ### log4j2
-- 2.17.0 可以使用，和 springboot 3.x 不兼容
-- 2.18.0 及以上不不支持 native，springboot 文档明确表示 log4j2 不支持 nativeimage
+- **2.17.0 可以支持**，和 springboot 3.x 不兼容,demo 见 https://github.com/FoghostCn/dubbo-native/tree/master/logging/log4j2
+- **2.18.0 及以上不不支持** native，springboot 文档明确表示 log4j2 不支持 nativeimage
 
 参考资料：
 
@@ -36,10 +36,8 @@ Caused by: com.oracle.svm.core.jdk.UnsupportedFeatureError: Defining hidden clas
         at java.base@17.0.6/java.lang.invoke.InnerClassLambdaMetafactory.generateInnerClass(InnerClassLambdaMetafactory.java:407)
         ... 13 more
 ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
-
-
 ```
 ### log4j 1.2.17
-可以支持，需要添加 reflect-config 及 resource-config，demo 见 [https://github.com/FoghostCn/dubbo-native/tree/master/logging/log4j-dubbo](https://github.com/FoghostCn/dubbo-native/tree/master/logging/log4j-dubbo)
+**可以支持**，需要添加 reflect-config 及 resource-config，demo 见 [https://github.com/FoghostCn/dubbo-native/tree/master/logging/log4j-dubbo](https://github.com/FoghostCn/dubbo-native/tree/master/logging/log4j-dubbo)
 ### jcl 1.2
-可以支持，需要添加 reflect-config，demo 见 [https://github.com/FoghostCn/dubbo-native/tree/master/logging/jcl](https://github.com/FoghostCn/dubbo-native/tree/master/logging/jcl)
+**可以支持**，需要添加 reflect-config，demo 见 [https://github.com/FoghostCn/dubbo-native/tree/master/logging/jcl](https://github.com/FoghostCn/dubbo-native/tree/master/logging/jcl)
