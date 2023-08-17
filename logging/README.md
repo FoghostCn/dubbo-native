@@ -1,5 +1,18 @@
+### log4j 1.2.17
+**可以支持**
+需要添加 reflect-config 及 resource-config，demo 见 [https://github.com/FoghostCn/dubbo-native/tree/master/logging/log4j-dubbo](https://github.com/FoghostCn/dubbo-native/tree/master/logging/log4j-dubbo)
+
+### jcl 1.2
+**可以支持**
+native-maven-plugin 0.9.24 版本插件已增加 commons-logging 1.2 的支持，只需要使用最新版本的插件即可
+
+### logback
+**可以支持**
+1. 在使用 springboot 3.x 的环境下可以完美支持，springboot 对 logback 做了单独支持
+2. 单独使用 logback 只支持 console appender，其他 appender 未支持，原因为 native-maven-plugin 对 logback 的支持不完善
+
 ### log4j2
-- **2.17.0 可以支持**，和 springboot 3.x 不兼容,demo 见 https://github.com/FoghostCn/dubbo-native/tree/master/logging/log4j2
+- **2.17.0 可以支持**，需要配置 reflect-config，和 springboot 3.x 不兼容，(demo 见 https://github.com/FoghostCn/dubbo-native/tree/master/logging/log4j2)
 - **2.18.0 及以上不不支持** native，springboot 文档明确表示 log4j2 不支持 nativeimage
 
 参考资料：
@@ -37,7 +50,3 @@ Caused by: com.oracle.svm.core.jdk.UnsupportedFeatureError: Defining hidden clas
         ... 13 more
 ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
 ```
-### log4j 1.2.17
-**可以支持**，需要添加 reflect-config 及 resource-config，demo 见 [https://github.com/FoghostCn/dubbo-native/tree/master/logging/log4j-dubbo](https://github.com/FoghostCn/dubbo-native/tree/master/logging/log4j-dubbo)
-### jcl 1.2
-**可以支持**，需要添加 reflect-config，demo 见 [https://github.com/FoghostCn/dubbo-native/tree/master/logging/jcl](https://github.com/FoghostCn/dubbo-native/tree/master/logging/jcl)
