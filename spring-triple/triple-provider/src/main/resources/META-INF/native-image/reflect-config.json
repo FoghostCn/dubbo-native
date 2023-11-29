@@ -1,29 +1,5 @@
 [
   {
-    "name": "org.apache.dubbo.rpc.protocol.tri.transport.TripleHttp2FrameServerHandler",
-    "allPublicMethods": true
-  },
-  {
-    "name": "org.apache.dubbo.rpc.protocol.tri.transport.TripleCommandOutBoundHandler",
-    "allPublicMethods": true
-  },
-  {
-    "name": "org.apache.dubbo.rpc.protocol.tri.transport.TripleTailHandler",
-    "allPublicMethods": true
-  },
-  {
-    "name": "org.apache.dubbo.rpc.protocol.tri.transport.TripleServerConnectionHandler",
-    "allPublicMethods": true
-  },
-  {
-    "name": "org.apache.dubbo.remoting.transport.netty4.NettyPortUnificationServerHandler",
-    "allPublicMethods": true
-  },
-  {
-    "name": "org.apache.dubbo.remoting.transport.netty4.NettyChannelHandler",
-    "allPublicMethods": true
-  },
-  {
     "name": "java.lang.Runtime$Version",
     "methods": [
       {
@@ -40,5 +16,33 @@
         "parameterTypes": []
       }
     ]
+  },
+  {
+    "name": "org.apache.dubbo.remoting.http12.netty4.h2.NettyHttp2FrameCodec",
+    "condition": {
+      "typeReachable": "org.apache.dubbo.remoting.http12.netty4.h2.NettyHttp2FrameCodec"
+    },
+    "queryAllPublicMethods": true
+  },
+  {
+    "name": "org.apache.dubbo.remoting.http12.netty4.h2.NettyHttp2FrameHandler",
+    "condition": {
+      "typeReachable": "org.apache.dubbo.remoting.http12.netty4.h2.NettyHttp2FrameHandler"
+    },
+    "queryAllPublicMethods": true
+  },
+  {
+    "name": "org.apache.dubbo.remoting.http12.netty4.h1.NettyHttp1Codec",
+    "condition": {
+      "typeReachable": "org.apache.dubbo.remoting.http12.netty4.h1.NettyHttp1Codec"
+    },
+    "queryAllPublicMethods": true
+  },
+  {
+    "name": "org.apache.dubbo.remoting.http12.netty4.HttpWriteQueueHandler",
+    "condition": {
+      "typeReachable": "org.apache.dubbo.remoting.http12.netty4.HttpWriteQueueHandler"
+    },
+    "queryAllPublicMethods": true
   }
 ]
